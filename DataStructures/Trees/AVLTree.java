@@ -30,11 +30,11 @@ public class AVLTree {
                 n = goLeft ? n.left : n.right;
  
                 if (n == null) {
-                    if (goLeft) {
+                    if (goLeft) 
                         parent.left = new Node(key, parent);
-                    } else {
+                    else 
                         parent.right = new Node(key, parent);
-                    }
+                    
                     rebalance(parent);
                     break;
                 }
@@ -46,11 +46,14 @@ public class AVLTree {
     private void delete(Node node){
         if(node.left == null && node.right == null){
             if(node.parent == null) root = null;
-            else{
+            
+	    else{
                 Node parent = node.parent;
-                if(parent.left == node){
+                if(parent.left == node)
                     parent.left = null;
-                }else parent.right = null;
+
+                else 
+		    parent.right = null;
                 rebalance(parent);
             }
             return;
@@ -60,11 +63,16 @@ public class AVLTree {
             while (child.right!=null) child = child.right;
             node.key = child.key;
             delete(child);
-        }else{
+	    rebalance(root);
+	// I think we should include the function 'rebalance'.
+        }
+	else{
             Node child = node.right;
             while (child.left!=null) child = child.left;
             node.key = child.key;
             delete(child);
+	    rebalance(root);
+	// I think we should include the function 'rebalance'.
         }
     }
  
