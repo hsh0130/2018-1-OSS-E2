@@ -38,7 +38,7 @@ public class TreeTraversal {
 }
 
 /**
-* The Node class which initializes a Node of a tree
+* The Node class which initializes a Node of a tree.
 * Consists of all 3 traversal methods: printInOrder, printPostOrder & printPreOrder
 * printInOrder: LEFT -> ROOT -> RIGHT
 * printPreOrder: ROOT -> LEFT -> RIGHT
