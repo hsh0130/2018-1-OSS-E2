@@ -26,7 +26,7 @@ public class BFS{
 		Stack st = new Stack(vertices);     //operational stack
 		st.push(source);                                                 //assigning source
 		while(!st.isEmpty()){
-			b[st.peek()]=(byte)0;                                   //assigning waiting status
+			b[st.peek()] = (byte)0;                                   //assigning waiting status
 			System.out.println(st.peek());
 			int pop=st.peek();
 			b[pop]=(byte)1;               //assigning processed status
@@ -50,10 +50,10 @@ public class BFS{
 		byte [][]a=new byte [vertices][vertices];
 		//initially all elements of a are initialized with value zero
 
-		for(int i=0;i<vertices;i++){
+		for(int i = 0;i < vertices; i++){
 			int size =in.nextInt();
-			for(int j=0;j<size;j++){
-				a[i][in.nextInt()]=1;      //taking adjacency entries by assigning 1
+			for(int j = 0; j < size; j++){
+				a[i][in.nextInt()] = 1;      //taking adjacency entries by assigning 1
 			}
 		}
 		bfsImplement(a,vertices,source);         //function call

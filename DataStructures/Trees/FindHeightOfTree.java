@@ -23,7 +23,7 @@ public class FindHeightOfTree {
         tree.insert(-8);
         tree.insert(-1);
 
-        // A level order representation of the tree
+        // A levelOrder representation of the tree
         tree.printLevelOrder();
         System.out.println();
 
