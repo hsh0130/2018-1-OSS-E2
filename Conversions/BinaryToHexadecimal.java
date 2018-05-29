@@ -14,7 +14,7 @@ public class BinaryToHexadecimal {
 	 * @param binary The binary number
 	 * @return The hexadecimal number
 	 */ 
-	static String binToHex(int binary)
+	static String binaryToHex(int binary)
 	{
 		//hm to store hexadecimal codes for binary numbers within the range: 0000 to 1111 i.e. for decimal numbers 0 to 15
 		HashMap<Integer,String> hm=new HashMap<>();	
